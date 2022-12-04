@@ -1,0 +1,68 @@
+@import "./../../variables.scss";
+
+.category-news-container{
+    max-width: 1110px;
+    margin: 20px auto;
+
+    .category-header{
+        display:flex;
+        flex-direction: row;
+        text-align: left;
+
+        span{
+            flex-grow: 1;
+            text-align: initial;
+            font-family: 'Georgia';
+            text-transform: capitalize;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 49px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+
+    .category-contents{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 31px;
+        justify-content: space-between;
+
+        .article-card-container-large{
+            margin-bottom: 30px;
+            width: 347px;
+        }
+    }
+}
+
+
+@media only screen and  (max-width: 1200px) {
+
+    .category-news-container{
+        max-width: 90%;
+        margin: 30px auto;
+
+        .category-contents{
+            .article-card-container-large{
+                width: 49%;
+            }
+        }
+    }
+}
+
+
+@media only screen and  (max-width: 768px) {
+
+    .category-news-container{
+        max-width: 94%;
+        margin: 30px auto;
+
+        .category-contents{
+            .article-card-container-large{
+                width: 100%;
+            }
+        }
+    }
+
+
+}

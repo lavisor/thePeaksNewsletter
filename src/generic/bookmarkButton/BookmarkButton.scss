@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.bookmarks-button{
+    cursor:pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px 4px;
+    gap: 6px;
+    // width: 157px;
+    height: 30px;
+    left: 841px;
+    top: 189px;
+    color:$primary-white;
+    background: $primary-blue;
+    box-shadow: $button-box-shadow;
+    border-radius: 4px;
+
+    span{
+        margin-left: 5px;
+    }
+
+    i{
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}

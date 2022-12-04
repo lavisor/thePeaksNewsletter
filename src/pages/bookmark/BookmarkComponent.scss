@@ -1,0 +1,56 @@
+
+@import "./../../variables.scss";
+
+.bookmark-container{
+    max-width: 1110px;
+    margin: 44px auto;
+
+    .bookmark-results-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 31px;
+        justify-content: space-around;
+    }
+
+    // .margin-card-fix{
+    //     margin-right: 30px;
+    // }
+
+    .article-card-container-large{
+        margin-bottom:30px;
+        
+    }
+
+    .card-size-large .title{
+        flex-direction: column;
+        height:unset;
+        text-align: start;
+        padding: 10px 10px;
+    }
+
+}
+
+@media only screen and  (max-width: 1200px) {
+
+    .bookmark-container{
+        .article-card-container-large{
+            width: 46%;
+        }
+
+        .bookmark-results-list{
+            padding: 0px 10px;
+        }
+    }
+
+}
+
+@media only screen and  (max-width: 768px) {
+
+    .bookmark-container{
+        
+        .article-card-container-large{
+            width: 98%;
+        }
+    }
+
+}

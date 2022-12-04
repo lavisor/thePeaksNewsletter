@@ -1,0 +1,68 @@
+@import "./../../variables.scss";
+
+.common-header {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+
+    .title{
+        flex-grow: 1;
+        text-align: initial;
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 49px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .user-actions-container{
+        display:flex;
+        flex-direction: row;
+        max-width:469px;
+
+        .bookmarks-button{
+            margin-top:11px;
+            margin-right: 13px;
+        }
+    }
+
+}
+
+@media only screen and  (max-width: 1200px) {
+    .common-header {
+        flex-direction: column;
+
+        .title{
+            text-align: center;
+        }
+
+        .user-actions-container{
+            margin: 10px auto;
+            .bookmarks-button {
+                max-width: 158px;
+            }
+        }
+
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    .common-header {
+        .title{
+            text-align: center;
+        }
+
+        .user-actions-container{
+            margin: 10px auto;
+            .bookmarks-button {
+                max-width: fit-content;
+                
+                span{
+                    display:none;
+                }
+            }
+        }
+
+    }
+}

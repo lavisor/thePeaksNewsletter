@@ -1,0 +1,19 @@
+@import "./../../variables.scss";
+
+.loader-container{
+    min-height: 600px;
+    padding-top: 194px;
+    text-align: center;
+    
+    .loader{
+        width: 88px;
+        height: 88px;
+        border: 8px solid $primary-blue;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+}
+

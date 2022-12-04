@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+textarea:focus, input:focus, select:focus{
+  outline: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +40,30 @@
     transform: rotate(360deg);
   }
 }
+
+
+@keyframes show-input{
+  0%{
+    width: 0px;  opacity:0;
+  }
+
+  100%{ width: 200px;  opacity:1;}
+}
+
+@keyframes hide-input{
+  0%{
+    width: 200px;
+    opacity:1;
+  }
+
+  100%{ width: 0px; opacity:0;}
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 

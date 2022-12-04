@@ -1,0 +1,38 @@
+.article-card-container-medium{
+
+    height: 252px;
+    width: 255px;
+}
+
+.article-card-container-small{
+
+    height: 138px;
+    width: 255px;
+}
+
+.article-card-container-large{
+
+    height: 350px;
+    width: 347px;
+}
+
+.article-card-container-exlarge{
+
+    height: 423px;
+    max-width: 540px;
+}
+
+@media only screen and  (max-width: 768px) {
+    .article-card-container-exlarge{
+
+        height: 423px;
+        width: 100%;
+        max-width:unset;
+    }
+
+}
+
+@media only screen and  (max-width: 1200px) {
+
+    
+}

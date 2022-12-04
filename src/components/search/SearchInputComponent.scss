@@ -1,0 +1,59 @@
+@import "../../variables.scss";
+
+    .searchbar-container{
+        float: right;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+
+        .search-icon{
+            background-image:url("../../../public/search-icon.png");
+            background-repeat:no-repeat;
+            width: 90px;
+            height: 20px;
+            background-position: center;
+            padding: 12px 0px;
+            border-bottom: 2px solid $primary-white;
+        }
+
+        .light{
+            background: $secondary-blue;
+            background-image:url("../../../public/search-icon.png");
+            background-repeat:no-repeat;
+            width: 90px;
+            height: 20px;
+            background-position: center;
+            padding: 12px 0px;
+            border-bottom: 2px solid $primary-white;
+        }
+
+        .seach-input{
+            width: 0px;
+            border: 0px;
+            border-bottom: 2px solid $primary-white;
+            background: $secondary-blue;
+            padding-left: 15px;
+            font-size: 16px;
+            color: $primary-white;
+        }
+
+        .animate-input-show{
+            width:200px;
+            animation: show-input 0.3s ease-in-out;
+        }
+
+        .animate-input-hide{
+            width:0px;
+            opacity:0;
+            animation: hide-input 0.3s ease-in-out;
+        }
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        .searchbar-container{
+            margin-top: 28px;
+            justify-content: center;
+        }
+    }

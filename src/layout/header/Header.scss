@@ -1,0 +1,56 @@
+@import "./../../variables.scss";
+
+
+.header-container {
+    height: 126px;
+    background: $primary-blue;
+
+    .header-logo{
+        background: url('../../../public/peaks-logo.png');
+        height: 56px;
+        width: 142px;
+    }
+
+    .header-items{
+        max-width: 1110px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+}
+
+
+@media only screen and  (max-width: 1024px) {
+
+    .header-container {
+        padding-right: 70px;
+
+        .header-items{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .header-logo{
+            margin: 0 auto;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header-container {
+        height: 160px;
+        padding-right: 20px;
+
+        .header-items{
+            flex-direction: column;
+        }
+    
+        .header-logo{
+            margin: 0 auto;
+        }
+
+    }
+}
