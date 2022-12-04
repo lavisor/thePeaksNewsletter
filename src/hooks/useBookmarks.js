@@ -9,12 +9,16 @@ function useBookmarks(sortBy){
     useEffect(()=> {
         console.log("sort by: ", sortBy);
         let arr = JSON.parse(localStorage.getItem("bookmarks"));
-        if(sortBy == "newest"){
-            arr = arr.sort((a, b) => { return new Date(a.webPublicationDate) - new Date(b.webPublicationDate)});
+        if(arr) {
+            if(sortBy == "newest"){
+                arr = arr.sort((a, b) => { return new Date(a.webPublicationDate) - new Date(b.webPublicationDate)});
+            } else {
+                arr = arr.sort((a, b) => { return new Date(b.webPublicationDate) - new Date(a.webPublicationDate)});
+            }
         } else {
-            arr = arr.sort((a, b) => { return new Date(b.webPublicationDate) - new Date(a.webPublicationDate)});
+            arr = [];
         }
-        
+
         setbookmarkResult(arr);
         setIsLoading(false);
     }, [sortBy])
