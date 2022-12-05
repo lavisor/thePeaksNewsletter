@@ -58,8 +58,8 @@
         align-content: center;
         height: 100%;
         flex-direction: column;
-        text-align: initial;
-        padding: 0px 10px;
+        padding: 10px 10px;
+        text-align: start;
     }
 
 }
@@ -105,9 +105,15 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        height: 50%;
+        height: 70%;
         flex-direction: column;
         padding: 0px 10px;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: initial;
     }
 
     .description{
@@ -121,7 +127,7 @@
         color: #FFFFFF;
         justify-content: center;
         align-content: center;
-        height: 50%;
+        height: 30%;
         flex-direction: column;
         text-align: initial;
         padding: 0px 16px;
@@ -146,7 +152,7 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        height: 50%;
+        height: 70%;
         flex-direction: column;
         text-align: initial;
         padding: 0px 10px;
@@ -161,13 +167,16 @@
         letter-spacing: 0.1px;
         color: #FFFFFF;
         
-        justify-content: center;
-        align-content: center;
-        height: 50%;
-        flex-direction: column;
+        // justify-content: center;
+        // align-content: center;
+        height: 30%;
+        // flex-direction: column;
         text-align: initial;
         padding: 0px 16px;
         margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
     }
 }

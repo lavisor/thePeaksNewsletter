@@ -13,7 +13,6 @@
     }
 
     const getSearchResults = (searchTerm, sortStr, pageNumber) => {
-        console.log(pageNumber);
         let pageSize = 15;
         let url = "https://content.guardianapis.com/search?q="+searchTerm+"&page-size="+pageSize+"&page="+pageNumber+"&show-fields=headline,trailText,thumbnail&order-by="+sortStr+"&api-key="+ apiKey;
         let searchResults = fetch(url);

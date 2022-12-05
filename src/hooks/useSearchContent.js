@@ -11,13 +11,15 @@ function useSearchContent(searchTerm , sortStr , pageNumber){
         setIsLoading(true);
         getSearchResults(searchTerm, sortStr, pageNumber).then(response => response.json()).then(data => {
             if(data.response.status == "ok"){
-                setSearchResult(data.response.results)
+                setSearchResult((prevData) => {
+                    return [ ...prevData , ...data.response.results]
+                })
             } else {
                 setError({ showError: true, message: "Some error!" }) 
             }
             setIsLoading(false);
         })
-    } , [searchTerm , sortStr , pageNumber])
+    } , [searchTerm , sortStr , pageNumber ])
 
     return { searchResult, isLoading, isError }
 }

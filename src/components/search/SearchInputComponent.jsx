@@ -10,19 +10,17 @@ function SearchInputComponent(){
 
     const keyUpFunction = debounce((event) => {
         if(event.target.value.trim().length > 0){
-            console.log(event.target.value);
             navigate('/search/'+event.target.value)
         }
 
         if(event.target.value.trim().length == 0){
             setOpenInput(false);
         }
-    }, 500)
+    }, 800)
 
     const performsearch = (event) =>{
         if(openInput){
             // do search
-            console.log("Will search happen");
             navigate('/search/'+event.target.value);
         } else {
             setOpenInput(true);

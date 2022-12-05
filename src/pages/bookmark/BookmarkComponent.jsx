@@ -9,11 +9,10 @@ import "./BookmarkComponent.scss";
 function BookmarkComponent(){
         const [ sortBy , setSortBy ] = useState("newest");
         const { bookmarkResult , isLoading, isError } = useBookmarks(sortBy);
-        console.log("search: ", bookmarkResult);
         const headerTitle="All bookmarks";
         window.scrollTo(0, 0);
         const articleList = bookmarkResult?.map((article, index) => {
-            return <div className={(index+1)%3 == 0 ? "article-card-container-large":"article-card-container-large margin-card-fix" }><Articlecard size="large" articleDetail={article} showDesc={false}/></div>
+            return <div className={(index+1)%3 == 0 ? "card-reveal article-card-container-large":"card-reveal article-card-container-large margin-card-fix" }><Articlecard size="large" articleDetail={article} showDesc={false}/></div>
         })
         
         const syncSortBy = (sortStr) => {

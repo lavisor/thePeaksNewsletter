@@ -6,7 +6,6 @@ import { useArticle } from "../../hooks/useArticles";
 import Toast from "../../generic/toast/Toast";
 import { formatDate } from "../../helper";
 import "./ArticleComponent.scss";
-import { type } from "@testing-library/user-event/dist/type";
 
 function ArticleComponent(){
     const params = useParams();
@@ -17,7 +16,7 @@ function ArticleComponent(){
 
     useEffect(()=> {
         let bookmarkedArticle = JSON.parse(window.localStorage.getItem("bookmarks"));
-        console.log("bookmark");
+        window.scrollTo(0,0);
         if(bookmarkedArticle?.filter(article => article.id == articleId).length > 0 ){
             setIsBookmarked(true);
         } else {
@@ -45,12 +44,11 @@ function ArticleComponent(){
     }
 
     const showToast = (status, message) => {
-        console.log(status)
         setToast({ show:true , status: status , message: message});
     
         setTimeout(()=> {
             setToast({ show:false , status: status ,  message: message});
-        }, 1000)
+        }, 2000)
     }
 
     var articleImage = {
@@ -73,7 +71,6 @@ function ArticleComponent(){
         }
     }
     
-    console.log("articleResult: ", articleResult);
     return (
         <div className="article-container">
          { isLoading && <Loader /> }  

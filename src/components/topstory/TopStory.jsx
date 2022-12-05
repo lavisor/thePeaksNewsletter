@@ -15,7 +15,6 @@ function TopStory({sortByCallback}){
     const bookmarkcallback = () => {
         navigate("/bookmark");
     }
-    console.log("render happened.")
     const filterResults = (value) => {
         setSortBy(value);
         sortByCallback(value);
@@ -34,29 +33,29 @@ function TopStory({sortByCallback}){
         <div className="topstory-content">
             <div className="left-story">
                 <div className="hero-article-container">
-                    <div className="article-card-container-exlarge">
+                    <div className="card-reveal article-card-container-exlarge">
                         <Articlecard size="exlarge" articleDetail={sectionList[0]} />
                     </div>
                 </div>
             </div>
             <div className="right-story">
                 <div className="top-medium-article">
-                    <div className="article-card-container-medium"><Articlecard size="medium" articleDetail={sectionList[1]}/></div>
-                    <div className="article-card-container-medium margin-left"><Articlecard size="medium" articleDetail={sectionList[2]}/></div>
+                    <div className="card-reveal article-card-container-medium"><Articlecard size="medium" articleDetail={sectionList[1]}/></div>
+                    <div className="card-reveal article-card-container-medium margin-left"><Articlecard size="medium" articleDetail={sectionList[2]}/></div>
                 </div>
 
                 <div className="bottom-small-article">
-                <div className="article-card-container-small"><Articlecard size="small" articleDetail={sectionList[3]} /></div>
-                <div className="article-card-container-small margin-left"><Articlecard size="small" articleDetail={sectionList[4]} /></div>
+                <div className="card-reveal article-card-container-small"><Articlecard size="small" articleDetail={sectionList[3]} /></div>
+                <div className="card-reveal article-card-container-small margin-left"><Articlecard size="small" articleDetail={sectionList[4]} /></div>
                 </div>
             </div>
         </div>
         }
         { !isLoading && !isError.showError && 
             <div className="topstory-content-below">
-                <div className="article-card-container-large"><Articlecard size="large" articleDetail={sectionList[5]} /></div>
-                <div className="article-card-container-large"><Articlecard size="large" articleDetail={sectionList[6]} /></div>
-                <div className="article-card-container-large"><Articlecard size="large" articleDetail={sectionList[7]} /></div>
+                <div className="card-reveal article-card-container-large"><Articlecard size="large" articleDetail={sectionList[5]} /></div>
+                <div className="card-reveal article-card-container-large"><Articlecard size="large" articleDetail={sectionList[6]} /></div>
+                <div className="card-reveal article-card-container-large"><Articlecard size="large" articleDetail={sectionList[7]} /></div>
             </div>
         }
 

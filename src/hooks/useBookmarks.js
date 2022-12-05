@@ -7,7 +7,6 @@ function useBookmarks(sortBy){
     const [ isError , setError ] = useState({showError: false, message: ""});
 
     useEffect(()=> {
-        console.log("sort by: ", sortBy);
         let arr = JSON.parse(localStorage.getItem("bookmarks"));
         if(arr) {
             if(sortBy == "newest"){
@@ -18,7 +17,7 @@ function useBookmarks(sortBy){
         } else {
             arr = [];
         }
-
+        
         setbookmarkResult(arr);
         setIsLoading(false);
     }, [sortBy])
