@@ -4,6 +4,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 You can find the app's [DEMO](https://thepeaks-newsletter.netlify.app)
+
+Desktop Performance report - 
+
+<a href="https://ibb.co/jgsSNjK"><img src="https://i.ibb.co/0hvx7zN/Desktop-Performance-Website.jpg" alt="Desktop-Performance-Website" border="0"></a>
+
+
+Mobile Performance report - 
+
+<a href="https://ibb.co/m0wzWZx"><img src="https://i.ibb.co/1M52WyS/mobileperformance-Website.jpg" alt="mobileperformance-Website" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
+
+
 ## Available Scripts
 
 In the project directory, you can run:
