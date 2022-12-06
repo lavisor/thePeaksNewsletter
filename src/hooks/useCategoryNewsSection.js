@@ -17,7 +17,7 @@ const  useCategoryNewsSection=(sortByStr, categoryType)=>{
             setIsLoading(false);
         })
 
-    } , [])
+    } , [sortByStr])
     return { categoryNewsList , isLoading , isError}
 }
 
